@@ -7,6 +7,7 @@
 #define _SPD_H_
 
 void get_spd_spec(void);
+void show_spd(void);
 
 #endif
 
