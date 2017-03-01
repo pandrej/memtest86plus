@@ -4,12 +4,16 @@
  * http://www.canardpc.com - http://www.memtest.org
  */
 
+#include "spd.h" 
+#include "config.h"
+
+#ifndef SPD_DISABLED
+
 #include "stdint.h"
 #include "test.h"
 #include "io.h"
 #include "pci.h"
 #include "msr.h"
-#include "spd.h"
 #include "screen_buffer.h"
 #include "jedec_id.h"
 
@@ -552,3 +556,21 @@ void show_spd(void)
 	}
     }
 }
+
+#else // SPD_DISABLED
+
+void show_spd(void)
+{
+	//
+	// Empty implementations if there is not SPD available
+	//
+}
+
+void get_spd_spec()
+{
+	//
+	// Empty implementations if there is not SPD available
+	//
+}
+
+#endif
