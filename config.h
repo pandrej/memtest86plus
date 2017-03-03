@@ -77,4 +77,4 @@
 
 /* SPD_DISABLED - disabled SPD data reading and usage
 */
-#define SPD_DISABLED
+//#define SPD_DISABLED
